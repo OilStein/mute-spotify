@@ -7,6 +7,8 @@ User can like albums, like songs and create playlists which creates an entry to 
 
 App will be programmed using either Tauri or Yew librarys for UI.
 
+Data prosessing will be done with Rust
+
 Notable links:
 - https://marianaossilva.github.io/DSW2019/index.html
 - https://tauri.app/
