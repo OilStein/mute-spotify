@@ -1,10 +1,7 @@
+import { Component } from "solid-js";
 
-const Body = () => {
-  return (
-    <div>
-
-    </div>
-  )
-}
+const Body: Component<{}> = (props) => {
+  return <div></div>;
+};
 
 export default Body;

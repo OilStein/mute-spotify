@@ -1,4 +1,3 @@
-import "./styles/SidebarOption.css";
 
 import {Component} from 'solid-js';
 

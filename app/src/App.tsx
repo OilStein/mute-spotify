@@ -1,12 +1,12 @@
-import { createSignal } from "solid-js";
-import { invoke } from "@tauri-apps/api/tauri";
-import "./styles/App.css";
+import Sidebar from "./components/Sidebar"
 
-function App() {
+const App = () => {
 
   return (
-  <div>
-  </div>
+    <div class="min-h-screen bg-zinc-800">
+      <Sidebar/>
+    </div>
+    
 );
 }
 
