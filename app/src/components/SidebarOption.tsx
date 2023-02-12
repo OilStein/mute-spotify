@@ -3,6 +3,7 @@ import {Component} from 'solid-js';
 type SidebarOptionProps = {
   title: any,
   Icon?: any,
+  state?: any
 }
 
 const SidebarOption: Component<SidebarOptionProps> = ({title, Icon}) => {
