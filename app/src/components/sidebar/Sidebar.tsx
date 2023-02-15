@@ -5,19 +5,22 @@ import { SiLibrariesdotio } from "solid-icons/si";
 import { IoHeart } from "solid-icons/io";
 import { AiFillPlusCircle, AiFillPlusSquare } from "solid-icons/ai";
 import { BsThreeDots } from "solid-icons/bs";
+import { invoke } from "@tauri-apps/api"
 
 type SidebarProps = { 
-  state: Accessor<number>,
-  setState: Setter<number>
+  state?: Accessor<number>,
+  setState?: Setter<number>
 }
 
 const Sidebar: Component<SidebarProps> = (props) => {
   const playlists = ["Rock", "Pop", "Indie", "Bar", "Lobby"];
 
+
+
   return (
     <div class="min-h-screen px-3 flex-col items-center w-52 bg-black pt-2">
       <SidebarOption title={""} Icon={BsThreeDots} />
-      <SidebarOption title={"Home"} Icon={OcHomefill3} />
+      <SidebarOption title={"Home"} Icon={OcHomefill3} onClick={() => invoke("window_state", {name: "home"})}/>
       <SidebarOption title={"Search"} Icon={OcSearch3} />
       <SidebarOption title={"Your Library"} Icon={SiLibrariesdotio} />
 
@@ -34,7 +37,7 @@ const Sidebar: Component<SidebarProps> = (props) => {
 
       <hr class="my-2" />
 
-      <SidebarOption title={"Add Album"} Icon={AiFillPlusCircle} state={props.setState}/>
+      <SidebarOption title={"Add Album"} Icon={AiFillPlusCircle}/>
     </div>
   );
 };

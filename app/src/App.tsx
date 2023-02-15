@@ -1,15 +1,17 @@
 import { createSignal } from "solid-js"
-import Body from "./components/Body"
-import Sidebar from "./components/Sidebar"
+import {Event as TauriEvent, listen} from "@tauri-apps/api/event"
+
+import Body from "./components/views/Body"
+import Sidebar from "./components/sidebar/Sidebar"
 
 const App = () => {
 
-  const [bodyState, setBodyState] = createSignal(0);
-
+  // Contains two main components sidebar and body.
+  // Sidebar contains reactive buttons that sets view in body component 
   return (
     <div class="min-h-screen bg-zinc-900 flex">
-      <Sidebar state={bodyState} setState={setBodyState}/>
-      <Body state={bodyState} setState={setBodyState}/>
+      <Sidebar/>
+      <Body/>
     </div>
     
 );

@@ -1,7 +1,7 @@
 import { Component } from "solid-js"
 import { OcSearch2 } from "solid-icons/oc";
 
-const Header: Component<{}> = (props) => {  
+const Searchbar: Component<{}> = (props) => {  
   return (
   <div>
     <div class="flex m-0 px-2 py-1 items-center rounded-full bg-white">
@@ -16,4 +16,4 @@ const Header: Component<{}> = (props) => {
   )
 };
 
-export default Header;
+export default Searchbar;
