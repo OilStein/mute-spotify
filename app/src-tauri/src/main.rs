@@ -5,6 +5,7 @@
 
 use std::sync::{Arc, Mutex};
 
+use app::utils::populate_app;
 use tauri::State;
 
 #[derive(Default)]
@@ -12,6 +13,7 @@ struct WindowState(Arc<Mutex<String>>);
 
 
 fn main() {
+    populate_app();
     tauri::Builder::default()
         .manage(WindowState(Default::default()))
         .invoke_handler(tauri::generate_handler![window_state, call])
